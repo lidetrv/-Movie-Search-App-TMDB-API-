@@ -11,10 +11,10 @@ interface HeaderProps {
   onShowFavorites: () => void;
   showFavorites: boolean;
 }
-
-const Header: React.FC<HeaderProps> = ({ 
-  onSearch, 
-  onGenreChange, 
+// header 
+const Header: React.FC<HeaderProps> = ({
+  onSearch,
+  onGenreChange,
   selectedGenre,
   onShowFavorites,
   showFavorites
@@ -42,13 +42,12 @@ const Header: React.FC<HeaderProps> = ({
             />
           </div>
 
-          <button 
+          <button
             onClick={onShowFavorites}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
-              showFavorites 
-                ? 'bg-rose-500 border-rose-500 text-white' 
+            className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${showFavorites
+                ? 'bg-rose-500 border-rose-500 text-white'
                 : 'bg-slate-800 border-slate-700 text-slate-300 hover:border-slate-500'
-            }`}
+              }`}
           >
             <Heart className={`w-4 h-4 ${showFavorites ? 'fill-current' : ''}`} />
             <span className="font-medium">Watchlist</span>
@@ -61,11 +60,10 @@ const Header: React.FC<HeaderProps> = ({
             <button
               key={genre}
               onClick={() => onGenreChange(genre)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-                selectedGenre === genre
+              className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${selectedGenre === genre
                   ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/20'
                   : 'bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-slate-200'
-              }`}
+                }`}
             >
               {genre}
             </button>
