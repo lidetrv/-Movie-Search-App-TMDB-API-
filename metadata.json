@@ -1,0 +1,5 @@
+{
+  "name": "CineMagic AI",
+  "description": "A high-performance movie search and discovery application powered by Gemini AI, featuring real-time search, genre filtering, and cinematic visual effects.",
+  "requestFramePermissions": []
+}
