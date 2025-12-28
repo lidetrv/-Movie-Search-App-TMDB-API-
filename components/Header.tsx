@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({
               {APP_NAME}
             </h1>
           </div>
-
+          {/* second comment */}
           <div className="relative w-full md:max-w-md">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
             <input
@@ -45,8 +45,8 @@ const Header: React.FC<HeaderProps> = ({
           <button
             onClick={onShowFavorites}
             className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${showFavorites
-                ? 'bg-rose-500 border-rose-500 text-white'
-                : 'bg-slate-800 border-slate-700 text-slate-300 hover:border-slate-500'
+              ? 'bg-rose-500 border-rose-500 text-white'
+              : 'bg-slate-800 border-slate-700 text-slate-300 hover:border-slate-500'
               }`}
           >
             <Heart className={`w-4 h-4 ${showFavorites ? 'fill-current' : ''}`} />
@@ -61,8 +61,8 @@ const Header: React.FC<HeaderProps> = ({
               key={genre}
               onClick={() => onGenreChange(genre)}
               className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${selectedGenre === genre
-                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/20'
-                  : 'bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-slate-200'
+                ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/20'
+                : 'bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-slate-200'
                 }`}
             >
               {genre}
